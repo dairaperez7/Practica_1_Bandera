@@ -48,3 +48,4 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
+// ON= Funciones y metodos que se le asignan a un evento

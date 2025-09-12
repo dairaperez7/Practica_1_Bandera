@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 // en un archivo todoo el diseno de mi pantalla de inicio
 @Composable
 fun InicioScreen(modifier: Modifier = Modifier){
-    Box(){
+    Box(modifier=modifier){
         Text(text = "Inicio Screen")    //funciones de orden superior //
     }
-}
+} //metodos de orden superior son los que no estan dentro de una clase//
