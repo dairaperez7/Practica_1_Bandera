@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 
 // en un archivo todoo el diseno de mi pantalla de inicio
 @Composable
-fun InicioScreen(Modifier: Modifier){
+fun InicioScreen(modifier: Modifier){
     Box(){
         Text(text = "Inicio Screen")
     }
