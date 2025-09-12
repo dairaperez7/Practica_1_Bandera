@@ -49,3 +49,4 @@ fun GreetingPreview() {
     }
 }
 // ON= Funciones y metodos que se le asignan a un evento
+//scaffold background
