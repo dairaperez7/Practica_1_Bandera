@@ -83,7 +83,7 @@ fun rectangulo() {
 
             drawRect(
                 color = Color.Green,
-                topLeft = Offset(30f, 0f),
+                topLeft = Offset(20f, 0f),
                 size = Size(200f, 600f), //para importar debo clickear alt + enter)// f de float//
                 style = Fill,
             )
