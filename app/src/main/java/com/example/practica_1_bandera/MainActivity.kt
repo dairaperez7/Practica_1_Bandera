@@ -78,7 +78,7 @@ fun rectangulo() {
                 .fillMaxSize()
                 .padding(0.dp, 20.dp)
         )
-
+///row y box//
         {
 
             drawRect(
