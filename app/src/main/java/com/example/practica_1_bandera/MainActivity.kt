@@ -78,7 +78,10 @@ fun rectangulo() {
                 .fillMaxSize()
                 .padding(0.dp, 20.dp)
         )
-///row y box//
+///row y box// row no tiene forma directa de pasar el padding
+        //el modifier es como la etiqeuta style, darle visual//
+        //hacerla de nuevo, ahora hacer la de japon. hacer el circulo con una clase que h=haga el circulo
+        //en main la bandera de mexico, creo nueva rama de nombre Japon y ahi creo la bandera. Circulo con shape
         {
 
             drawRect(
