@@ -124,4 +124,16 @@ fun rectangulo() {
 //click evento, metodo es onclick// nombre de metodo y accion que deben de tener coherencia//
 //cada eventi tiene su propia accion//
 //Bundle
-//
+//scaffold es una estructura inicial
+//composable puede meter composables dentro de otros composables
+//puedo  psar una funcion como parametro de otr
+//content se pone despues de los parentesis
+//practica(){
+// composable} las llaves son el content
+//content es un composable, el composable es una funcionq que se puede representar el formato lambda
+//composable es una etiqueta donde puedo meter mas etiquetas
+//innerpadding parametro
+//@composable() -> Unit = {}
+//ctrl + click para ver el scaffold
+//topbar es opcional
+//carpeta screen con funcion inicio screen
