@@ -107,7 +107,7 @@ fun rectangulo() {
                 contentDescription = "bandderita",
                 modifier = Modifier
                     .size(60.dp)
-                    .offset(85.dp,100.dp)
+                    .offset(160.dp,180.dp)
             )
 
         }
@@ -119,3 +119,9 @@ fun rectangulo() {
 
 // ON= Funciones y metodos que se le asignan a un evento
 //scaffold background
+
+//evento ---> accion//
+//click evento, metodo es onclick// nombre de metodo y accion que deben de tener coherencia//
+//cada eventi tiene su propia accion//
+//Bundle
+//
