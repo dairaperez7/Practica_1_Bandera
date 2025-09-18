@@ -216,3 +216,6 @@ fun Japon() {
 //modifier debe se der el primero
 //si mi objeto no tiene valor por default va primero que mi modifier
 //column,scope
+//se pueden combinar columnas con renglones y reglones con columnas
+//constraint checar
+//hacer bandera argentina
