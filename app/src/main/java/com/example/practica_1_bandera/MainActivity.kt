@@ -127,7 +127,7 @@ fun rectangulo() {
 
 @Preview(showBackground = true)
 @Composable
-fun rectangulon() {
+fun Japon() {
     Row(
         modifier = Modifier.statusBarsPadding()
 
@@ -137,36 +137,28 @@ fun rectangulon() {
             modifier = Modifier
                 .weight(weight = 1f)
                 .fillMaxSize()
-                .background(Color.Green)
-        )
-
-        Box(
-            modifier = Modifier
-                .weight(weight = 1f)
-                .fillMaxSize()
                 .background(Color.White),
             contentAlignment = Alignment.Center
-                )
 
-                {
-                    val image = painterResource(R.drawable.memories)
-                    Image(
-                        painter = image,
-                        contentDescription = "bandderita",
-                        modifier = Modifier.size(100.dp)
-                    )
+                ){
+            Canvas(
+                modifier = Modifier
+                    .size(300.dp)
+            ) {
+                drawCircle(
+                    color = Color.Red,
+                    radius = size.minDimension / 3f,
+                    center = center
+
+                )
+            }
+
+
+
 
 
                 }
 
-
-        Box(
-            modifier = Modifier
-                .weight(weight = 1f)
-                .fillMaxSize()
-                .background(Color.Red
-                )
-        )
 
     }
 
