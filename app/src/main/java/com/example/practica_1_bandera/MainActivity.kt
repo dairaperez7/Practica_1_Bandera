@@ -200,5 +200,5 @@ fun Japon() {
 //al preview le podemos poner un tamano
 //consejo del preview, para ver que el composable al que voy a hacerle preview no debe tener parametros
 //dentro de ese composable debo llamar al otro con los parametros
-//creo un metodo vacio y en ese metodo vacio llamo al que tiene parametros
-//
+//creo un metodo vacio y en ese metodo vacio llamo al que tiene parametros//
+//todo lo que va despues del punto  modifierr es lo que regresa de nuevo el modifieer//
