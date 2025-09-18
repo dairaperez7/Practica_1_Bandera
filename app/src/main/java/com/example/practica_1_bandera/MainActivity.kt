@@ -6,14 +6,18 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
@@ -124,7 +128,47 @@ fun rectangulo() {
 @Preview(showBackground = true)
 @Composable
 fun rectangulon() {
+    Row(
+        modifier = Modifier.statusBarsPadding()
 
+    ){
+
+        Box(
+            modifier = Modifier
+                .weight(weight = 1f)
+                .fillMaxSize()
+                .background(Color.Green)
+        )
+
+        Box(
+            modifier = Modifier
+                .weight(weight = 1f)
+                .fillMaxSize()
+                .background(Color.White),
+            contentAlignment = Alignment.Center
+                )
+
+                {
+                    val image = painterResource(R.drawable.memories)
+                    Image(
+                        painter = image,
+                        contentDescription = "bandderita",
+                        modifier = Modifier.size(100.dp)
+                    )
+
+
+                }
+
+
+        Box(
+            modifier = Modifier
+                .weight(weight = 1f)
+                .fillMaxSize()
+                .background(Color.Red
+                )
+        )
+
+    }
 
 }
 
