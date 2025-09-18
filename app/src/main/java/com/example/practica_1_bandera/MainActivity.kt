@@ -106,18 +106,27 @@ fun rectangulo() {
                 style = Fill,
             )
         }
-            val image = painterResource(R.drawable.memories)
-            Image(
-                painter = image,
-                contentDescription = "bandderita",
-                modifier = Modifier
-                    .size(60.dp)
-                    .offset(160.dp,180.dp)
-            )
-
-        }
+        val image = painterResource(R.drawable.memories)
+        Image(
+            painter = image,
+            contentDescription = "bandderita",
+            modifier = Modifier
+                .size(60.dp)
+                .offset(160.dp, 180.dp)
+        )
 
     }
+
+
+
+}
+
+@Preview(showBackground = true)
+@Composable
+fun rectangulon() {
+
+
+}
 
 //en el box es para que todos esten juntitos, el que se pone hasta abajo es el que dice quien se superpone
 //canvas e image son diferentes, por ende no pueden estar dentro de las mismas llaves
