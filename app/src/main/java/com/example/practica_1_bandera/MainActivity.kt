@@ -164,6 +164,7 @@ fun Japon() {
 
 }
 
+
 //en el box es para que todos esten juntitos, el que se pone hasta abajo es el que dice quien se superpone
 //canvas e image son diferentes, por ende no pueden estar dentro de las mismas llaves
 
