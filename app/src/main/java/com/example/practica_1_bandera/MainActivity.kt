@@ -193,3 +193,9 @@ fun Japon() {
 //hay objetos que pueden devolver el mismo objeto
 //Perro.ladrar().Comer().Beber().nombre() asi esta el modifier
 //modifier.fillmaxsize().background().
+//listener es el que ayuda a que suceda la accion, iria en medio del metoodo y accion
+//listener es el que esta atento del evento. porque un evento tiene accion, pero alguien debe estar atento para que cuando suceda el evento se dispare la accion
+//on change focus
+//on key event
+//al preview le podemos poner un tamano
+//
