@@ -205,4 +205,14 @@ fun Japon() {
 //todo lo que va despues del punto  modifierr es lo que regresa de nuevo el modifieer//
 //orden del modifier importa, al ponerle los metodos hay que cuidar eso
 //manzana de pedro
-//
+//por ejemplo, separando con un padding puedo hacer multiples border
+//dentro de clickable va la accion
+//todos los composables deben de tener un composable
+//al generar el composable se hase modifier:Modifier=Modifier)
+//1.nombre, 2.tipo de dato y 3.el valor
+//si quiero que sea opcional pasar el modifier, paso el valor por deffault
+///dejar el default me da la oportunidad de no poner parametros
+//el modifier que se recibe es el que es con m minuscula si lo pusiera con M seria uno nuevo (por ejemplo en el box)
+//modifier debe se der el primero
+//si mi objeto no tiene valor por default va primero que mi modifier
+//column,scope
