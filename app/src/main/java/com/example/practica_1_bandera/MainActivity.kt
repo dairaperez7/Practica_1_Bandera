@@ -203,3 +203,6 @@ fun Japon() {
 //dentro de ese composable debo llamar al otro con los parametros
 //creo un metodo vacio y en ese metodo vacio llamo al que tiene parametros//
 //todo lo que va despues del punto  modifierr es lo que regresa de nuevo el modifieer//
+//orden del modifier importa, al ponerle los metodos hay que cuidar eso
+//manzana de pedro
+//
