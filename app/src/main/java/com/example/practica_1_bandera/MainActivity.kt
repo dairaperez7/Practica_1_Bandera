@@ -186,4 +186,10 @@ fun Japon() {
 //@composable() -> Unit = {}
 //ctrl + click para ver el scaffold
 //topbar es opcional
-//carpeta screen con funcion inicio screen
+//carpeta screen con funcion inicio scree
+//
+//funcion de extension: es una funcion que le voy a ponder a un objeto que no es mio
+//composable es un objeto
+//hay objetos que pueden devolver el mismo objeto
+//Perro.ladrar().Comer().Beber().nombre() asi esta el modifier
+//modifier.fillmaxsize().background().
