@@ -8,8 +8,13 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -125,59 +130,34 @@ fun rectangulo() {
 
 }
 
-@Preview(showBackground = true)
+
 @Composable
-fun Argentina() {
-    Row(
-        modifier = Modifier.statusBarsPadding()
-
-    ) {
-
-        Box(
-            modifier = Modifier
-                .weight(weight = 1f)
-                .fillMaxSize()
-                .background(Color (0xFF74ACDF)),
-
-
-        ){
-
+fun Argentina(modifier: Modifier) {
+        Column(modifier=modifier.background(Color.White)){
+            Box(modifier = Modifier.fillMaxWidth())
         }
-
-        Box(
-            modifier = Modifier
-                .weight(weight = 1f)
-                .fillMaxSize()
-                .background(Color.White),
-            contentAlignment = Alignment.Center
-
-        ) {
-            val image = painterResource(R.drawable.wow)
-            Image(
-                painter = image,
-                contentDescription = "cosa",
-                modifier = Modifier.size(1000.dp)
-            )
 
 
 
         }
-            Box(
-                modifier = Modifier
-                    .weight(weight = 1f)
-                    .fillMaxSize()
-                    .background(Color(0xFF74ACDF)),
 
+@Composable
+fun InicioScreen(modifier: Modifier){
+    Row(modifier=modifier.background(Color.White)){
+        Box(modifier = Modifier.fillMaxHeight().background(Color.Blue).height(height = 300.dp))
+        Spacer(modifier=Modifier.height(height = 30.dp))
+        Box(modifier = Modifier.fillMaxHeight().background(Color.Red).height(30.dp))
 
-            ){
+    }
+}
+@Preview(showBackground = true, showSystemUi = false)
+@Composable
+fun InicioScreenPreview(){
+    InicioScreen(modifier = Modifier
+        .fillMaxSize()
+        .background(Color.Gray))
+}
 
-            }
-
-
-            }
-
-
-        }
 
 
 
