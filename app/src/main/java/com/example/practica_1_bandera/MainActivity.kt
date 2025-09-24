@@ -152,6 +152,12 @@ fun Argentina() {
             contentAlignment = Alignment.Center
 
         ) {
+            val image = painterResource(R.drawable.wow)
+            Image(
+                painter = image,
+                contentDescription = "cosa",
+                modifier = Modifier.size(1000.dp)
+            )
 
 
 
