@@ -137,7 +137,7 @@ fun Argentina() {
             modifier = Modifier
                 .weight(weight = 1f)
                 .fillMaxSize()
-                .background(Color.Blue),
+                .background(Color (0xFF74ACDF)),
 
 
         ){
@@ -166,7 +166,7 @@ fun Argentina() {
                 modifier = Modifier
                     .weight(weight = 1f)
                     .fillMaxSize()
-                    .background(Color.Blue),
+                    .background(Color(0xFF74ACDF)),
 
 
             ){
