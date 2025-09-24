@@ -127,11 +127,22 @@ fun rectangulo() {
 
 @Preview(showBackground = true)
 @Composable
-fun Japon() {
+fun Argentina() {
     Row(
         modifier = Modifier.statusBarsPadding()
 
-    ){
+    ) {
+
+        Box(
+            modifier = Modifier
+                .weight(weight = 1f)
+                .fillMaxSize()
+                .background(Color.Blue),
+            contentAlignment = Alignment.Center
+
+        ){
+
+        }
 
         Box(
             modifier = Modifier
@@ -140,29 +151,36 @@ fun Japon() {
                 .background(Color.White),
             contentAlignment = Alignment.Center
 
-                ){
+        ) {
+        }
+            Box(
+                modifier = Modifier
+                    .weight(weight = 10f)
+                    .fillMaxSize()
+                    .background(Color.Blue),
+                contentAlignment = Alignment.Center
+
+            ){
+
+            }
+
+
             Canvas(
                 modifier = Modifier
                     .size(300.dp)
             ) {
-                drawCircle(
-                    color = Color.Red,
-                    radius = size.minDimension / 3f,
-                    center = center
 
-                )
             }
 
 
+            }
+
+
+        }
 
 
 
-                }
 
-
-    }
-
-}
 
 
 //en el box es para que todos esten juntitos, el que se pone hasta abajo es el que dice quien se superpone
