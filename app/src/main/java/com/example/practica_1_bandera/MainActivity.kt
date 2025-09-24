@@ -138,7 +138,7 @@ fun Argentina() {
                 .weight(weight = 1f)
                 .fillMaxSize()
                 .background(Color.Blue),
-            contentAlignment = Alignment.Center
+
 
         ){
 
@@ -155,10 +155,10 @@ fun Argentina() {
         }
             Box(
                 modifier = Modifier
-                    .weight(weight = 10f)
+                    .weight(weight = 1f)
                     .fillMaxSize()
                     .background(Color.Blue),
-                contentAlignment = Alignment.Center
+
 
             ){
 
