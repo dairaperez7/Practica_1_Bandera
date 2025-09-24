@@ -165,14 +165,6 @@ fun Argentina() {
             }
 
 
-            Canvas(
-                modifier = Modifier
-                    .size(300.dp)
-            ) {
-
-            }
-
-
             }
 
 
