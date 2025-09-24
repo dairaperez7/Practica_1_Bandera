@@ -44,6 +44,8 @@ fun InicioScreenPreview(){
 }
 
 
+
+
 //funciones de orden superior //
 
  //metodos de orden superior son los que no estan dentro de una clase//
