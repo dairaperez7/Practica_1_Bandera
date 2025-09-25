@@ -34,14 +34,12 @@ fun InicioScreen(modifier: Modifier) {
         Box(modifier = Modifier
             .background(Color(0xFF009739))
             .fillMaxSize()
-        ){
+        )
 
 
 
 
 
-
-        }
 
         }
 
