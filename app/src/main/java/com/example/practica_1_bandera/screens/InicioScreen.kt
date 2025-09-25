@@ -31,7 +31,9 @@ import androidx.graphics.shapes.toPath
 fun InicioScreen(modifier: Modifier) {
     Box(modifier = Modifier.fillMaxSize()) {
 
-        Column(modifier = Modifier.background(Color.#013220).fillMaxSize()
+        Box(modifier = Modifier
+            .background(Color(0xFF009739))
+            .fillMaxSize()
         ){
 
 
