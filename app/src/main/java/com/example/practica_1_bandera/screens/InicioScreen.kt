@@ -20,28 +20,10 @@ import androidx.compose.ui.unit.dp
 // en un archivo todoo el diseno de mi pantalla de inicio
 @Composable
 fun InicioScreen(modifier: Modifier){
-    Column(modifier=modifier.background(Color.White)){
-        Box(modifier= Modifier.fillMaxWidth().weight(weight = 1f)){
-            Row(Modifier.fillMaxWidth()){
-                Box(modifier= Modifier.weight(weight = 1f).background(Color.Red).fillMaxHeight())
-                Spacer(modifier=Modifier.weight(weight = 1f))
-                Box(modifier=Modifier.weight(weight = 3f).background(Color.Red).fillMaxHeight())
+Box(modifier = Modifier){
 
-            }
-        }
-        Spacer(modifier= Modifier.weight(weight = 1f))
-        Box(modifier=Modifier.fillMaxWidth().weight(weight=1f)){
-            Row(modifier=Modifier.fillMaxWidth()){
-                Box(modifier=Modifier.weight(weight = 1f).background(Color.Red).fillMaxHeight())
-                Spacer(modifier =Modifier.weight(weight = 1f))
-                Box(modifier=Modifier.weight(weight = 3f).background(Color.Red).fillMaxHeight())
-
-                }
-            }
-
-        }
-        }
-
+}
+}
 
 
 
