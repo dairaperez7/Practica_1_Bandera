@@ -30,13 +30,12 @@ import androidx.graphics.shapes.toPath
 @Composable
 fun InicioScreen(modifier: Modifier) {
     Box(modifier = Modifier.fillMaxSize()) {
-
         Column(modifier = Modifier.background(Color.White).fillMaxSize()) {
-            Box(modifier = Modifier.fillMaxHeight().background(Color.Blue).height(20.dp))
+            Box(modifier = Modifier.fillMaxHeight().background(Color.Blue).height(200.dp))
         }
 
     }
-}
+    }
             @Preview(showBackground = true, showSystemUi = false)
             @Composable
             fun InicioScreenPreview() {
