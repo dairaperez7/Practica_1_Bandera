@@ -31,20 +31,22 @@ import androidx.graphics.shapes.toPath
 fun InicioScreen(modifier: Modifier) {
     Box(modifier = Modifier.fillMaxSize()) {
 
-        Row(modifier=Modifier.background(Color.White).fillMaxWidth()
+        Column(modifier = Modifier.background(Color.White).fillMaxSize()
         ){
             Box(modifier=Modifier
                 .fillMaxWidth(0.3f)
-                .background(Color.Red)
+                .background(Color.Blue)
+                .height(200.dp)
             )
-        }
 
-        Column(modifier = Modifier){
-        Box(modifier = Modifier
-            .weight(1f)
-            .fillMaxHeight()
-            .background(Color.Blue))
-    }
+            Box(modifier=Modifier
+                .fillMaxWidth(1f)
+                .background(Color.Red)
+                .height(220.dp)
+            )
+
+
+        }
 
     }
     }
