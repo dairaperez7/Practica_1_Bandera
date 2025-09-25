@@ -31,77 +31,21 @@ import androidx.graphics.shapes.toPath
 fun InicioScreen(modifier: Modifier) {
     Box(modifier = Modifier.fillMaxSize()) {
 
-        Column(modifier = Modifier.background(Color.Blue).fillMaxSize()) {
-
-            Spacer(modifier = Modifier.height(90.dp))
-
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth(1f)
-                    .background(Color.White)
-                    .height(70.dp)
-            )
-
-            Spacer(modifier = Modifier.height(90.dp))
-
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth(1f)
-                    .background(Color.White)
-                    .height(70.dp)
-            )
-
-            Spacer(modifier = Modifier.height(90.dp))
-
+        Column(modifier = Modifier.background(Color.White).fillMaxSize()) {
+            Box(modifier = Modifier.fillMaxHeight().background(Color.Blue).height(20.dp))
         }
 
     }
-    Box(
-        modifier = Modifier
-            .size(width = 150.dp, height = 330.dp)
-            .drawWithCache {
-                val roundedPolygon = RoundedPolygon(
-                    numVertices = 3,
-                    radius =  size.height ,
-                    centerX = 0f + size.width / 3,
-                    centerY = size.height/2 ,
-                    rounding = CornerRounding(
-                        size.minDimension / 10f,
-                        smoothing = 0.1f
-                    )
-                )
-                val roundedPolygonPath = roundedPolygon.toPath().asComposePath()
-                onDrawBehind {
-                    drawPath(roundedPolygonPath, color = Color.Red)
-                }
-            }
-    ) {
-
-        Text(
-            text = "★",
-            color = Color.White,
-            fontSize = 150.sp,
-            modifier = Modifier.align(Alignment.CenterStart) //me dio hueva de otra manera pipipip
-        )
-    }
-
-
-
 }
-
-
-
-
-
-    @Preview(showBackground = true, showSystemUi = false)
-    @Composable
-    fun InicioScreenPreview() {
-        InicioScreen(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color.Gray)
-        )
-    }
+            @Preview(showBackground = true, showSystemUi = false)
+            @Composable
+            fun InicioScreenPreview() {
+                InicioScreen(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Color.Gray)
+                )
+            }
 
 
 
