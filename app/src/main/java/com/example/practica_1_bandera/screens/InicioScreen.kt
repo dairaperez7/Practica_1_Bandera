@@ -48,8 +48,17 @@ fun InicioScreen(modifier: Modifier) {
 
         }
 
+
+            Text(
+                text = "★",
+                color = Color.White,
+                fontSize = 150.sp,
+                modifier = Modifier.align(Alignment.TopStart) //me dio hueva de otra manera pipipip
+            )
+        }
+
     }
-    }
+
             @Preview(showBackground = true, showSystemUi = false)
             @Composable
             fun InicioScreenPreview() {
