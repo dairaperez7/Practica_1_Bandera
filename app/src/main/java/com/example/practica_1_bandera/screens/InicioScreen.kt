@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,15 +21,31 @@ import androidx.compose.ui.unit.dp
 // en un archivo todoo el diseno de mi pantalla de inicio
 @Composable
 fun InicioScreen(modifier: Modifier){
-    Row(modifier=modifier.background(Color.Blue)){
-            Box(modifier = Modifier.weight(1f).background(Color.Red))
-    }
+        Column(modifier = Modifier.background(Color.Blue).fillMaxSize()) {
 
+            Spacer(modifier = Modifier.height(90.dp))
 
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth(1f)
+                    .background(Color.White)
+                    .height(70.dp)
+            )
 
-}
+            Spacer(modifier = Modifier.height(90.dp))
 
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth(1f)
+                        .background(Color.White)
+                        .height(70.dp)
+                )
 
+            Spacer(modifier = Modifier.height(90.dp))
+
+            }
+
+        }
 
 
 
