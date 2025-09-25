@@ -31,30 +31,16 @@ import androidx.graphics.shapes.toPath
 fun InicioScreen(modifier: Modifier) {
     Box(modifier = Modifier.fillMaxSize()) {
 
-        Column(modifier = Modifier.background(Color.White).fillMaxSize()
+        Column(modifier = Modifier.background(Color.#013220).fillMaxSize()
         ){
-            Box(modifier=Modifier
-                .fillMaxWidth(0.3f)
-                .background(Color.Blue)
-                .height(200.dp)
-            )
 
-            Box(modifier=Modifier
-                .fillMaxWidth(1f)
-                .background(Color.Red)
-                .height(220.dp)
-            )
+
+
+
 
 
         }
 
-
-            Text(
-                text = "★",
-                color = Color.White,
-                fontSize = 150.sp,
-                modifier = Modifier.align(Alignment.TopStart) //me dio hueva de otra manera pipipip
-            )
         }
 
     }
