@@ -30,9 +30,21 @@ import androidx.graphics.shapes.toPath
 @Composable
 fun InicioScreen(modifier: Modifier) {
     Box(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = Modifier.background(Color.White)) {
-            Box(modifier = Modifier.fillMaxHeight().background(Color.Blue).height(200.dp))
+
+        Row(modifier=Modifier.background(Color.White).fillMaxWidth()
+        ){
+            Box(modifier=Modifier
+                .fillMaxWidth(0.3f)
+                .background(Color.Red)
+            )
         }
+
+        Column(modifier = Modifier){
+        Box(modifier = Modifier
+            .weight(1f)
+            .fillMaxHeight()
+            .background(Color.Blue))
+    }
 
     }
     }
