@@ -22,44 +22,17 @@ import androidx.compose.ui.graphics.asComposePath
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.graphics.shapes.CornerRounding
 import androidx.graphics.shapes.RoundedPolygon
 import androidx.graphics.shapes.toPath
 
 // en un archivo todoo el diseno de mi pantalla de inicio
+@Preview
 @Composable
-fun InicioScreen(modifier: Modifier) {
-    Box(modifier = Modifier.fillMaxSize()) {
-
-        Box(modifier = Modifier
-            .background(Color(0xFF009739))
-            .fillMaxSize()
-        )
-
-
-
-
-
-
+fun Fernando(){
+        ConstraintLayout{
+                val StartGuideline =createGuidelineFromStart(0.1f)
         }
-
-    }
-
-            @Preview(showBackground = true, showSystemUi = false)
-            @Composable
-            fun InicioScreenPreview() {
-                InicioScreen(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(Color.Gray)
-                )
-            }
-
-
-
-
-
-//funciones de orden superior //
-
- //metodos de orden superior son los que no estan dentro de una clase//
-//no afecta del orden de los factores
+}

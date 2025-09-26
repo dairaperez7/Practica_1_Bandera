@@ -1,5 +1,6 @@
 package com.example.practica_1_bandera
 
+import android.R.attr.end
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -19,6 +20,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -38,8 +40,11 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.practica_1_bandera.screens.InicioScreen
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
+
 import com.example.practica_1_bandera.ui.theme.Practica_1_BanderaTheme
+import kotlinx.coroutines.NonDisposableHandle.parent
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -157,6 +162,76 @@ fun InicioScreenPreview(){
         .fillMaxSize()
         .background(Color.Gray))
 }
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun Fernando() {
+    ConstraintLayout(
+        modifier = Modifier.fillMaxSize()
+    ) {
+
+        val startGuideline = createGuidelineFromStart(fraction = 0.1f)
+        val endGuideline = createGuidelineFromEnd(fraction = 0.1f)
+        val topGuideline = createGuidelineFromTop(offset = 16.dp)
+        val bottomGuideline = createGuidelineFromBottom(offset = 16.dp)
+
+
+        val box = createRef()
+
+        Box(
+            modifier = Modifier
+                .background(Color.Blue)
+                .constrainAs(box) {
+                    start.linkTo(startGuideline)
+                    end.linkTo(endGuideline)
+                    top.linkTo(topGuideline)
+                    bottom.linkTo(bottomGuideline)
+                    width = Dimension.fillToConstraints
+                    height = Dimension.fillToConstraints
+                }
+        )
+    }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun Fernandito() {
+    ConstraintLayout(
+        modifier = Modifier.fillMaxSize()) {
+        val (BoxRed, BoxGreen, BoxWhite, Nium) = createRefs()
+
+        Box(
+            modifier = Modifier.fillMaxHeight(.5f).width(150.dp).background(Color.Green)
+                .constrainAs(BoxGreen) {})
+        Box(modifier = Modifier.fillMaxSize().background(Color.White).constrainAs(BoxWhite) {}
+        ){
+            Image(
+                painter = painterResource(id=R.drawable.perrr),
+                contentDescription = "Fernandote",
+                modifier = Modifier.size(100.dp)
+
+            )
+        }
+
+
+        Box(
+            modifier = Modifier.fillMaxHeight(.5f).width(150.dp).background(Color.Red)
+                .constrainAs(BoxRed) {
+
+                    end.linkTo(parent.end)
+                })
+
+    }
+
+
+
+
+    }
+
+
+
+
+
 
 
 
