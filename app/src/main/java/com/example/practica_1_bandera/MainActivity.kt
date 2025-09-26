@@ -201,21 +201,26 @@ fun Fernandito() {
         val (BoxRed, BoxGreen, BoxWhite, Nium) = createRefs()
 
         Box(
-            modifier = Modifier.fillMaxHeight(.5f).width(150.dp).background(Color.Green)
+            modifier = Modifier.fillMaxHeight().width(120.dp).background(Color.Green)
                 .constrainAs(BoxGreen) {})
-        Box(modifier = Modifier.fillMaxSize().background(Color.White).constrainAs(BoxWhite) {}
+
+
+        Box(modifier = Modifier.fillMaxHeight().width(100.dp).background(Color.White).constrainAs(BoxWhite) {
+            top.linkTo(parent.top)
+            bottom.linkTo(parent.bottom)
+        }
         ){
             Image(
                 painter = painterResource(id=R.drawable.perrr),
                 contentDescription = "Fernandote",
-                modifier = Modifier.size(100.dp)
+                modifier = Modifier.size(50.dp),
 
             )
         }
 
 
         Box(
-            modifier = Modifier.fillMaxHeight(.5f).width(150.dp).background(Color.Red)
+            modifier = Modifier.fillMaxHeight().width(150.dp).background(Color.Red)
                 .constrainAs(BoxRed) {
 
                     end.linkTo(parent.end)
