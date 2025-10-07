@@ -198,22 +198,22 @@ fun Fernando() {
 fun Fernandito() {
     ConstraintLayout(
         modifier = Modifier.fillMaxSize()) {
-        val (BoxRed, BoxGreen, BoxWhite, Nium) = createRefs()
+        val (BoxRed, BoxGreen, BoxWhite,) = createRefs()
 
         Box(
             modifier = Modifier.fillMaxHeight().width(120.dp).background(Color.Green)
-                .constrainAs(BoxGreen) {})
+                .constrainAs(BoxGreen) {start.linkTo(parent.start)})
 
 
         Box(modifier = Modifier.fillMaxHeight().width(100.dp).background(Color.White).constrainAs(BoxWhite) {
-            top.linkTo(parent.top)
-            bottom.linkTo(parent.bottom)
+            start.linkTo(BoxWhite.end)
+            end.linkTo(parent.end)
         }
         ){
             Image(
                 painter = painterResource(id=R.drawable.perrr),
                 contentDescription = "Fernandote",
-                modifier = Modifier.size(50.dp),
+                modifier = Modifier.size(800.dp),
 
             )
         }
