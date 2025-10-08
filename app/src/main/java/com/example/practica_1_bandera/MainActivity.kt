@@ -75,15 +75,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 
 
-@Composable
-fun Argentina(modifier: Modifier) {
-        Column(modifier=modifier.background(Color.White)){
-            Box(modifier = Modifier.fillMaxWidth())
-        }
-
-
-
-        }
 
 @Composable
 fun InicioScreen(modifier: Modifier) {
@@ -109,44 +100,6 @@ fun InicioScreen(modifier: Modifier) {
 }
 
 
-
-@Preview(showBackground = true, showSystemUi = false)
-@Composable
-fun InicioScreenPreview(){
-    InicioScreen(modifier = Modifier
-        .fillMaxSize()
-        .background(Color.Gray))
-}
-
-@Preview(showBackground = true, showSystemUi = true)
-@Composable
-fun Fernando() {
-    ConstraintLayout(
-        modifier = Modifier.fillMaxSize()
-    ) {
-
-        val startGuideline = createGuidelineFromStart(fraction = 0.1f)
-        val endGuideline = createGuidelineFromEnd(fraction = 0.1f)
-        val topGuideline = createGuidelineFromTop(offset = 16.dp)
-        val bottomGuideline = createGuidelineFromBottom(offset = 16.dp)
-
-
-        val box = createRef()
-
-        Box(
-            modifier = Modifier
-                .background(Color.Blue)
-                .constrainAs(box) {
-                    start.linkTo(startGuideline)
-                    end.linkTo(endGuideline)
-                    top.linkTo(topGuideline)
-                    bottom.linkTo(bottomGuideline)
-                    width = Dimension.fillToConstraints
-                    height = Dimension.fillToConstraints
-                }
-        )
-    }
-}
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
