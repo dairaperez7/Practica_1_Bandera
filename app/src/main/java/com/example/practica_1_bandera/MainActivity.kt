@@ -235,3 +235,7 @@ private fun VerticalAnchorable.linkTo(anchor: ConstraintLayoutBaseScope.Horizont
 //hacer bandera argentina
 //de lectura es val en el constructor primario
 //val P = Perro() P infiera a traves del constructoor que es un variable de tipo perro
+//forma correcta val p:: Perro=Perro();
+//val x= 0
+//val x: int=0
+//Val: tipo=constructor
