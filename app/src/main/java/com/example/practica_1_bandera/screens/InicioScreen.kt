@@ -39,10 +39,8 @@ fun InicioScreen(modifier: Modifier){
                 }
             }
 
+             }
         }
-        }
-
-
 
 
 
