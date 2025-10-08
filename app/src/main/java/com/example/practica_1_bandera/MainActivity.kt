@@ -239,3 +239,7 @@ private fun VerticalAnchorable.linkTo(anchor: ConstraintLayoutBaseScope.Horizont
 //val x= 0
 //val x: int=0
 //Val: tipo=constructor
+//class Bulldog: Perro{
+// {} o {     } sellada o no
+//los tipos de clase que conozco//
+//tipos de acceso
