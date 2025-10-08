@@ -107,10 +107,28 @@ fun Fernandito() {
     ConstraintLayout(
         modifier = Modifier.fillMaxSize().background(Color.White)
     ) {
-        val (BoxRed ) = createRefs()
+        val (BoxRed) = createRefs()
 
-        Box(modifier = Modifier)
+        Box(
+            modifier = Modifier.constrainAs(BoxRed){
+                top.linkTo(parent.top)
+                    bottom.linkTo(parent.bottom)
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+            })
+         {
+            Canvas(
+                modifier = Modifier
+                    .size(300.dp)
+            ) {
+                drawCircle(
+                    color = Color.Red,
+                    radius = size.minDimension / 3f,
+                    center = center
 
+                )
+            }
+        }
     }
 }
 
