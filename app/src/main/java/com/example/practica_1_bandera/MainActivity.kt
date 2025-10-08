@@ -70,59 +70,6 @@ fun GreetingPreview() {
         Greeting("Android")
 
     }
-
-}
-@Preview(showBackground = true)
-@Composable
-fun rectangulo() {
-    Box(modifier = Modifier) {
-
-        Canvas(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(0.dp, 20.dp)
-        )
-///row y box// row no tiene forma directa de pasar el padding
-        //el modifier es como la etiqeuta style, darle visual//
-        //hacerla de nuevo, ahora hacer la de japon. hacer el circulo con una clase que h=haga el circulo
-        //en main la bandera de mexico, creo nueva rama de nombre Japon y ahi creo la bandera. Circulo con shape
-        //1er trabajo, bandera de mexico en la main, cambiamos de rama a la nueva y ahi est ala otra. Hacer commit antes de cambiarse de branch. Sin el push (no tan necesario)
-        {
-            //hacerlo con boxes, column/ row y con boxes // image
-
-            drawRect(
-                color = Color.Green,
-                topLeft = Offset(20f, 0f),
-                size = Size(200f, 600f), //para importar debo clickear alt + enter)// f de float//
-                style = Fill,
-            )
-            drawRect(
-                color = Color.White,
-                topLeft = Offset(200f, 0f),
-                size = Size(200f, 600f), //para importar debo clickear alt + enter)// f de float//
-                style = Fill,
-
-                )
-            drawRect(
-                color = Color.Red,
-                topLeft = Offset(400f, 0f),
-                size = Size(200f, 600f), //para importar debo clickear alt + enter)// f de float//
-                style = Fill,
-            )
-        }
-        val image = painterResource(R.drawable.memories)
-        Image(
-            painter = image,
-            contentDescription = "bandderita",
-            modifier = Modifier
-                .size(60.dp)
-                .offset(160.dp, 180.dp)
-        )
-
-    }
-
-
-
 }
 
 @Preview(showBackground = true)
@@ -130,9 +77,7 @@ fun rectangulo() {
 fun Japon() {
     Row(
         modifier = Modifier.statusBarsPadding()
-
     ){
-
         Box(
             modifier = Modifier
                 .weight(weight = 1f)
@@ -152,16 +97,8 @@ fun Japon() {
 
                 )
             }
-
-
-
-
-
                 }
-
-
     }
-
 }
 
 
