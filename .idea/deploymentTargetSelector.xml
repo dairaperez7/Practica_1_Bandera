@@ -8,16 +8,16 @@
       <SelectionState runConfigName="rectangulon">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="InicioScreenPreview (1)">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="Fernando">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="Fernando (1)">
+      <SelectionState runConfigName="Fernandito">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="Fernandito">
+      <SelectionState runConfigName="InicioScreenPreview">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="rectangulo">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

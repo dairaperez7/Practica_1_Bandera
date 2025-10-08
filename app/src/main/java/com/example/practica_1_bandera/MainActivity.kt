@@ -147,14 +147,30 @@ fun Argentina(modifier: Modifier) {
         }
 
 @Composable
-fun InicioScreen(modifier: Modifier){
-    Row(modifier=modifier.background(Color.White)){
-        Box(modifier = Modifier.fillMaxHeight().background(Color.Blue).height(height = 300.dp))
-        Spacer(modifier=Modifier.height(height = 30.dp))
-        Box(modifier = Modifier.fillMaxHeight().background(Color.Red).height(30.dp))
-
+fun InicioScreen(modifier: Modifier) {
+    Row(
+        modifier = modifier
+            .background(Color.White)
+            .height(170.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .fillMaxHeight()
+                .width(150.dp)
+                .background(Color.Blue)
+        )
+        Spacer(modifier = Modifier.width(100.dp))
+        Box(
+            modifier = Modifier
+                .fillMaxHeight()
+                .width(170.dp)
+                .background(Color.Red)
+        )
     }
 }
+
+
+
 @Preview(showBackground = true, showSystemUi = false)
 @Composable
 fun InicioScreenPreview(){
