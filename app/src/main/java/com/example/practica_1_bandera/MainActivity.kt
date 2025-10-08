@@ -40,6 +40,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 
@@ -105,32 +106,51 @@ fun InicioScreen(modifier: Modifier) {
 @Composable
 fun Fernandito() {
     ConstraintLayout(
-        modifier = Modifier.fillMaxSize().background(Color.White)
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.White)
     ) {
-        val (BoxRed) = createRefs()
+
+        val (franjaAzul, franjaRoja, estrella) = createRefs()
+
 
         Box(
-            modifier = Modifier.constrainAs(BoxRed){
-                top.linkTo(parent.top)
-                    bottom.linkTo(parent.bottom)
-                start.linkTo(parent.start)
-                end.linkTo(parent.end)
-            })
-         {
-            Canvas(
-                modifier = Modifier
-                    .size(300.dp)
-            ) {
-                drawCircle(
-                    color = Color.Red,
-                    radius = size.minDimension / 3f,
-                    center = center
+            modifier = Modifier
+                .constrainAs(franjaAzul) {
+                    top.linkTo(parent.top)
+                    start.linkTo(parent.start)
+                    width = Dimension.percent(0.3f)
+                    height = Dimension.value(210.dp)
+                }
+                .background(Color.Blue)
+        )
 
-                )
+        // Franja roja
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .constrainAs(franjaRoja) {
+                    bottom.linkTo(parent.bottom)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    height = Dimension.percent(0.5f)
+                }
+                .background(Color.Red))
+
+
+        Text(
+            text = "★",
+            color = Color.White,
+            fontSize = 150.sp,
+            modifier = Modifier.constrainAs(estrella) {
+                top.linkTo(parent.top)
+                start.linkTo(parent.start)
             }
-        }
+        )
     }
 }
+
+
 
 
 
