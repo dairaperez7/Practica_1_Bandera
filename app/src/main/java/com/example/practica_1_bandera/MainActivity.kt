@@ -105,58 +105,14 @@ fun InicioScreen(modifier: Modifier) {
 @Composable
 fun Fernandito() {
     ConstraintLayout(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier.fillMaxSize().background(Color.White)
     ) {
-        val (BoxRed, Boxblue, BoxWhite) = createRefs()
+        val (BoxRed ) = createRefs()
 
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(Color(0xFF74ACDF))
-                .constrainAs(Boxblue) {
-                    top.linkTo(parent.top)
-                    start.linkTo(parent.start)
-                    end.linkTo(parent.end)
-                    height = androidx.constraintlayout.compose.Dimension.percent(0.33f)
-                }
-        )
+        Box(modifier = Modifier)
 
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(Color.White)
-                .constrainAs(BoxWhite) {
-                    top.linkTo(Boxblue.bottom)
-                    start.linkTo(parent.start)
-                    end.linkTo(parent.end)
-                    height = androidx.constraintlayout.compose.Dimension.percent(0.34f)
-                }
-        ) {
-            Image(
-                painter = painterResource(id = R.drawable.wow),
-                contentDescription = "Fernandote",
-                modifier = Modifier
-                    .align(Alignment.Center)
-                    .size(200.dp) // Ajusta tamaño si lo deseas
-            )
-        }
-
-
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(Color(0xFF74ACDF))
-                .constrainAs(BoxRed) {
-                    top.linkTo(BoxWhite.bottom)
-                    start.linkTo(parent.start)
-                    end.linkTo(parent.end)
-                    bottom.linkTo(parent.bottom)
-                    height = androidx.constraintlayout.compose.Dimension.percent(0.33f)
-                }
-        )
     }
 }
-
 
 
 
