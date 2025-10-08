@@ -40,10 +40,14 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.max
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.ConstraintLayoutBaseScope
 import androidx.constraintlayout.compose.Dimension
+import androidx.constraintlayout.compose.VerticalAnchorable
 
 import com.example.practica_1_bandera.ui.theme.Practica_1_BanderaTheme
+import kotlinx.coroutines.NonDisposableHandle
 import kotlinx.coroutines.NonDisposableHandle.parent
 
 class MainActivity : ComponentActivity() {
@@ -107,35 +111,61 @@ fun Fernandito() {
     ConstraintLayout(
         modifier = Modifier.fillMaxSize().background(Color.White)
     ) {
-        val (BoxRed) = createRefs()
+        val (Box1, Box2, Box3, Box4, Box5, Box6, Box7, Box8, Box9, Box10, Box11, Box12) = createRefs()
 
-        Box(
-            modifier = Modifier.constrainAs(BoxRed){
-                top.linkTo(parent.top)
-                    bottom.linkTo(parent.bottom)
-                start.linkTo(parent.start)
-                end.linkTo(parent.end)
-            })
-         {
-            Canvas(
-                modifier = Modifier
-                    .size(300.dp)
-            ) {
-                drawCircle(
-                    color = Color.Red,
-                    radius = size.minDimension / 3f,
-                    center = center
+        Box(modifier = Modifier.size(50.dp).background(Color.Yellow).constrainAs(Box1) {
+            top.linkTo(parent.top)
+            bottom.linkTo(parent.bottom)
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+        })
+        Box(modifier = Modifier.size(50.dp).background(Color.Black).constrainAs(Box2) {
+            bottom.linkTo(parent.bottom, margin = 17.dp)
+            end.linkTo(parent.end, 80.dp)
+        })
+        Box(modifier = Modifier.size(50.dp).background(Color.Yellow).constrainAs(Box3) {
+            bottom.linkTo(parent.bottom, margin = 17.dp)
+            end.linkTo(Box2.start)
 
-                )
-            }
-        }
+        })
+        Box(modifier = Modifier.size(50.dp).background(Color.Black).constrainAs(Box4) {
+            bottom.linkTo(parent.bottom, margin = 17.dp)
+            end.linkTo(Box3.start)
+
+        })
+        Box(modifier = Modifier.width(50.dp).height(500.dp).background(Color.Black).constrainAs(Box5) {
+            bottom.linkTo(parent.bottom)
+            top.linkTo(parent.top, margin = 285.dp  )
+            end.linkTo(parent.end, margin = 40.dp)
+
+        })
+        Box(modifier = Modifier.size(50.dp).background(Color.Yellow).constrainAs(Box6) {
+            bottom.linkTo(parent.bottom, margin = 17.dp)
+            end.linkTo(Box4.start)
+
+        })
+
+        Box(modifier = Modifier.size(50.dp).background(Color.Black).constrainAs(Box7) {
+            bottom.linkTo(parent.bottom, margin = 17.dp)
+            end.linkTo(Box6.start)
+
+        })
+
+        Box(modifier = Modifier.width(50.dp).height(500.dp).background(Color.Black).constrainAs(Box8) {
+            bottom.linkTo(parent.bottom)
+            start.linkTo(parent.start, margin = 40.dp)
+            top.linkTo(parent.top, margin = 285.dp)
+
+
+        })
+
+        Box(modifier = Modifier.width(250.dp).height(50.dp).background(Color.Black).constrainAs(Box9){
+            bottom.linkTo(Box8.top)
+            start.linkTo(parent.start, margin = 80.dp)
+        })
     }
 }
-
-
-
-
-
+private fun VerticalAnchorable.linkTo(anchor: ConstraintLayoutBaseScope.HorizontalAnchor) {}
 
 
 //en el box es para que todos esten juntitos, el que se pone hasta abajo es el que dice quien se superpone
