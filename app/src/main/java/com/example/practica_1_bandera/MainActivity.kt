@@ -233,3 +233,5 @@ private fun VerticalAnchorable.linkTo(anchor: ConstraintLayoutBaseScope.Horizont
 //se pueden combinar columnas con renglones y reglones con columnas
 //constraint checar
 //hacer bandera argentina
+//de lectura es val en el constructor primario
+//val P = Perro() P infiera a traves del constructoor que es un variable de tipo perro
