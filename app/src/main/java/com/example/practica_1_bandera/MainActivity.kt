@@ -152,45 +152,57 @@ fun Fernando() {
 @Composable
 fun Fernandito() {
     ConstraintLayout(
-        modifier = Modifier.fillMaxSize()) {
-        val (BoxRed, BoxGreen, BoxWhite,) = createRefs()
+        modifier = Modifier.fillMaxSize()
+    ) {
+        val (BoxRed, Boxblue, BoxWhite) = createRefs()
 
         Box(
-            modifier = Modifier.fillMaxHeight().width(120.dp).background(Color.Green)
-                .constrainAs(BoxGreen) {start.linkTo(parent.start)})
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Color(0xFF74ACDF))
+                .constrainAs(Boxblue) {
+                    top.linkTo(parent.top)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    height = androidx.constraintlayout.compose.Dimension.percent(0.33f)
+                }
+        )
 
-
-        Box(modifier = Modifier.fillMaxHeight().width(100.dp).background(Color.White).constrainAs(BoxWhite) {
-            start.linkTo(BoxWhite.end)
-            end.linkTo(parent.end)
-        }
-        ){
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Color.White)
+                .constrainAs(BoxWhite) {
+                    top.linkTo(Boxblue.bottom)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    height = androidx.constraintlayout.compose.Dimension.percent(0.34f)
+                }
+        ) {
             Image(
-                painter = painterResource(id=R.drawable.perrr),
+                painter = painterResource(id = R.drawable.wow),
                 contentDescription = "Fernandote",
-                modifier = Modifier.size(800.dp),
-
+                modifier = Modifier
+                    .align(Alignment.Center)
+                    .size(200.dp) // Ajusta tamaño si lo deseas
             )
         }
 
 
         Box(
-            modifier = Modifier.fillMaxHeight().width(150.dp).background(Color.Red)
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Color(0xFF74ACDF))
                 .constrainAs(BoxRed) {
-
+                    top.linkTo(BoxWhite.bottom)
+                    start.linkTo(parent.start)
                     end.linkTo(parent.end)
-                })
-
+                    bottom.linkTo(parent.bottom)
+                    height = androidx.constraintlayout.compose.Dimension.percent(0.33f)
+                }
+        )
     }
-
-
-
-
-    }
-
-
-
-
+}
 
 
 
