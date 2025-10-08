@@ -163,6 +163,11 @@ fun Fernandito() {
             bottom.linkTo(Box8.top)
             start.linkTo(parent.start, margin = 80.dp)
         })
+
+        Box(modifier = Modifier.size(50.dp).background(Color.Black).constrainAs(Box10){
+            bottom.linkTo(Box4.top, margin = 380.dp)
+            start.linkTo(parent.start, margin = 130.dp)
+        })
     }
 }
 private fun VerticalAnchorable.linkTo(anchor: ConstraintLayoutBaseScope.HorizontalAnchor) {}
