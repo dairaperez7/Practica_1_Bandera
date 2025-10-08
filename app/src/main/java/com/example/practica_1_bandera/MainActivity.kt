@@ -26,6 +26,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawWithCache
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Paint
@@ -34,14 +35,19 @@ import androidx.compose.ui.graphics.drawscope.draw
 import androidx.compose.ui.graphics.Color
 
 import androidx.compose.ui.graphics.Outline
+import androidx.compose.ui.graphics.asComposePath
 import androidx.compose.ui.graphics.drawscope.DrawStyle
 import androidx.compose.ui.graphics.drawscope.Fill
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.graphics.shapes.CornerRounding
+import androidx.graphics.shapes.RoundedPolygon
+import androidx.graphics.shapes.toPath
 
 import com.example.practica_1_bandera.ui.theme.Practica_1_BanderaTheme
 import kotlinx.coroutines.NonDisposableHandle.parent
@@ -105,13 +111,125 @@ fun InicioScreen(modifier: Modifier) {
 @Composable
 fun Fernandito() {
     ConstraintLayout(
-        modifier = Modifier.fillMaxSize().background(Color.White)
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.White)
     ) {
-        val (BoxRed) = createRefs()
+        // Referencias para todas las franjas y triángulo
+        val (franjaAzul1, franjaBlanca1, franjaAzul2, franjaRoja, franjaBlanca2, franjaAzul3, triangulo) = createRefs()
 
 
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .constrainAs(franjaAzul1) {
+                    top.linkTo(parent.top)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    height = androidx.constraintlayout.compose.Dimension.percent(1f / 6f)
+                }
+                .background(Color.Blue)
+        )
 
 
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .constrainAs(franjaBlanca1) {
+                    top.linkTo(franjaAzul1.bottom)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    height = androidx.constraintlayout.compose.Dimension.percent(1f / 6f)
+                }
+                .background(Color.White)
+        )
+
+
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .constrainAs(franjaAzul2) {
+                    top.linkTo(franjaBlanca1.bottom)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    height = androidx.constraintlayout.compose.Dimension.percent(1f / 6f)
+                }
+                .background(Color.Blue)
+        )
+
+
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .constrainAs(franjaRoja) {
+                    top.linkTo(franjaAzul2.bottom)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    height = androidx.constraintlayout.compose.Dimension.percent(1f / 6f)
+                }
+                .background(Color.White)
+        )
+
+
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .constrainAs(franjaBlanca2) {
+                    top.linkTo(franjaRoja.bottom)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    height = androidx.constraintlayout.compose.Dimension.percent(1f / 6f)
+                }
+                .background(Color.Blue)
+        )
+
+
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .constrainAs(franjaAzul3) {
+                    top.linkTo(franjaBlanca2.bottom)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    bottom.linkTo(parent.bottom)
+                }
+                .background(Color.Blue)
+        )
+
+
+        Box(
+            modifier = Modifier
+                .size(width = 150.dp, height = 330.dp)
+                .constrainAs(triangulo) {
+                    top.linkTo(parent.top)
+                    start.linkTo(parent.start)
+                }
+                .drawWithCache {
+                    val roundedPolygon = RoundedPolygon(
+                        numVertices = 3,
+                        radius = size.height,
+                        centerX = size.width / 3,
+                        centerY = size.height / 2,
+                        rounding = CornerRounding(
+                            size.minDimension / 10f,
+                            smoothing = 0.1f
+                        )
+                    )
+                    val roundedPolygonPath = roundedPolygon.toPath().asComposePath()
+                    onDrawBehind {
+                        drawPath(roundedPolygonPath, color = Color.Red)
+                    }
+                }
+        ) {
+            Text(
+                text = "★",
+                color = Color.White,
+                fontSize = 150.sp,
+                modifier = Modifier.align(Alignment.CenterStart)
+            )
+        }
+    }
+}
 
 
 
