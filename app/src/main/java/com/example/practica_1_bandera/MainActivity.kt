@@ -100,18 +100,81 @@ fun InicioScreen(modifier: Modifier) {
 }
 
 
-
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun Fernandito() {
     ConstraintLayout(
-        modifier = Modifier.fillMaxSize().background(Color.White)
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.Red)
     ) {
-        val (BoxRed, Boxitaredsita) = createRefs()
+        val (BoxRed) = createRefs()
 
 
+        Box(
+            modifier = Modifier
+                .constrainAs(BoxRed) {
+                    top.linkTo(parent.top)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    bottom.linkTo(parent.bottom)
+                }
+                .fillMaxSize()
+                .background(Color.White)
+        ) {
+            Column(
+                modifier = Modifier.fillMaxSize()
+            ) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f)
+                ) {
+                    Row(modifier = Modifier.fillMaxWidth()) {
+                        Box(
+                            modifier = Modifier
+                                .weight(1f)
+                                .background(Color.Red)
+                                .fillMaxHeight()
+                        )
+                        Spacer(modifier = Modifier.weight(1f))
+                        Box(
+                            modifier = Modifier
+                                .weight(3f)
+                                .background(Color.Red)
+                                .fillMaxHeight()
+                        )
+                    }
+                }
+
+                Spacer(modifier = Modifier.weight(1f))
+
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f)
+                ) {
+                    Row(modifier = Modifier.fillMaxWidth()) {
+                        Box(
+                            modifier = Modifier
+                                .weight(1f)
+                                .background(Color.Red)
+                                .fillMaxHeight()
+                        )
+                        Spacer(modifier = Modifier.weight(1f))
+                        Box(
+                            modifier = Modifier
+                                .weight(3f)
+                                .background(Color.Red)
+                                .fillMaxHeight()
+                        )
+                    }
+                }
+            }
         }
+
     }
+}
 
 
 
